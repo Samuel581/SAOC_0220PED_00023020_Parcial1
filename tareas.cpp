@@ -21,15 +21,21 @@ int main(){
     cin >> registro.duracion;
     cout << "Inserte tipo (R, C, O): ";
     cin >> registro.tipo;
+    cout << endl;
 
     dificultad();
 }
 
 void dificultad(){
     int duraciontotal=0;
-    duraciontotal=(registro.dificultad)*(registro.duracion);
-    cout << " ---------- D A T O S  F I N A L E S -------------------" << endl;
-    cout << "Tarea: " << registro.nombreUbicacion << endl;
-    cout << "Tipo: " << registro.tipo << endl;
-    cout << "Duracion total: " << registro.dificultad*registro.duracion << " segundos" << endl;
+    if((registro.dificultad)>=4){
+        duraciontotal=(registro.dificultad)*(registro.duracion);
+        cout << " ---------- D A T O S  F I N A L E S -------------------" << endl;
+        cout << "Tarea: " << registro.nombreUbicacion << endl;
+        cout << "Tipo: " << registro.tipo << endl;
+        cout << "Duracion total: " << registro.dificultad*registro.duracion << " segundos" << endl;
+    }
+    else{
+        cout << "Suerte :D";
+    }
 }
